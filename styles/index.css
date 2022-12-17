@@ -3,12 +3,3 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
-
-.social-media {
-  width: 30px;
-  height: 30px;
-}
-
-.facebook {
-  background-image: url('../public/facebook.png');
-}
