@@ -14,7 +14,7 @@ export default function Index({ preview, allPosts }) {
     <>
       <Layout preview={preview}>
         <Head>
-          <title> Blog Example with {CMS_NAME}</title>
+          <title> Blog with {CMS_NAME}</title>
         </Head>
         <Container>
           <Intro />
