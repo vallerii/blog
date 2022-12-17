@@ -10,7 +10,8 @@ import SectionSeparator from '../../components/section-separator'
 import Layout from '../../components/layout'
 import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
 import PostTitle from '../../components/post-title'
-import { CMS_NAME } from '../../lib/constants'
+//import Comments from '../../components/comments'
+import React from 'react'
 import {
   FacebookShareButton,
   FacebookIcon,
@@ -36,7 +37,7 @@ export default function Post({ post, morePosts, preview }) {
             <article>
               <Head>
                 <title>
-                  {post.title} | Blog  with {CMS_NAME}
+                  {post.title} | Iinterior.Blog  
                 </title>
                 <meta property="og:image" content={post.coverImage.url} />
               </Head>
@@ -61,6 +62,7 @@ export default function Post({ post, morePosts, preview }) {
               </TwitterShareButton>
             </div>
 
+            
             <SectionSeparator />
             {morePosts && morePosts.length > 0 && (
               <MoreStories posts={morePosts} />
