@@ -12,9 +12,6 @@ import Head from 'next/head'
 export default function Search({ allPosts }) {
   const [query, setQuery] = useState('');
   const { asPath } = useRouter()
-
-  console.log(getAllPostsForHome(true))//обработать промисы сделать поиск
-  
   return (
     <>
       <form action="" role="search">
@@ -32,18 +29,18 @@ export default function Search({ allPosts }) {
       </form>
       <>
         
-        {/*{searchResults?.hits.length === 0 && query && (
-          <p>No results, keep searching.</p>
+        {query && (
+          <p>Нема результатів</p>
         )}
-        {searchResults?.hits.length > 0 && query && (
+        {query && (
           <ol>
-            {visiblePosts.hits.map((hit) => (
-                <a key={hit.slug} href={asPath == '/posts/blog' ? hit.slug : `posts/${hit.slug}`}>
-              <li className="resultsLink" key={hit.objectID}>{hit.title}</li>
+            {allPosts.map((post) => (
+                <a key={post.slug} href={asPath == '/posts/blog' ? post.slug : `posts/${post.slug}`}>
+              <li className="resultsLink" key={post.objectID}>{post.title === query}</li>
               </a>
             ))}
           </ol>
-            )}*/}
+            )}
       </>
     </>
   )

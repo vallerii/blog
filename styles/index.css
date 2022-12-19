@@ -22,6 +22,8 @@ ul {
 }
 .box {
     display: flex;
+    flex-direction: column;
+    justify-content: left;
 }
 
 form {
@@ -66,8 +68,7 @@ label[type="submit"]:hover {
     opacity: 1;
 }
 
-label[type="submit"]:focus,
-input[type="search"]:focus {
+label[type="submit"]:focus {
     box-shadow: 0 0 3px 0 #a3cd96;
     ;
     border-color: #a3cd96;
