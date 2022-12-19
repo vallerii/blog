@@ -10,7 +10,7 @@ import SectionSeparator from '../../components/section-separator'
 import Layout from '../../components/layout'
 import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
 import PostTitle from '../../components/post-title'
-//import Comments from '../../components/comments'
+import Comments from '../../components/comments'
 import React from 'react'
 import {
   FacebookShareButton,
@@ -61,7 +61,7 @@ export default function Post({ post, morePosts, preview }) {
                 <TwitterIcon size={32} round />
               </TwitterShareButton>
             </div>
-
+            <Comments post={post}/>
             
             <SectionSeparator />
             {morePosts && morePosts.length > 0 && (
